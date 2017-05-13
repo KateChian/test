@@ -1,0 +1,245 @@
+<html xmlns="http://www.w3.org/1999/xhtml" data-livestyle-extension="available">
+
+<head runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+    <title></title>
+    <style type="text/css">
+    .toolbar {
+        background-image: url(toolbar_repeat.gif);
+        height: 33px;
+        margin: 0 auto;
+        width: 99%;
+    }
+    
+    .toolbar_left {
+        background-image: url(toolbar_left.gif);
+        background-repeat: no-repeat;
+        width: 5px;
+        float: left;
+        height: 33px;
+    }
+    
+    .toolbar_right {
+        background-image: url(toolbar_right.gif);
+        background-repeat: no-repeat;
+        width: 5px;
+        height: 33px;
+        float: right;
+        display: inline;
+    }
+
+
+    @media screen and (min-width:0px) {
+        .toolbar_content {
+            width: 98% \9;
+        }
+    }
+    .toolbar_content {
+        float: left;
+        height: 24px;
+        padding-top: 5px;
+        font-family: Arial;
+        font-size: 9pt;
+        background: url(toolbar_repeat.gif) repeat;
+        /*2017-04-20 new*/
+        
+        width: 98% \9;
+        *width: auto; /*IE5-IE7*/
+        width: calc(100% - 10px);/*IE9以上*/
+        
+    }
+    
+    .toolbar_content li {
+        display: inline;
+        list-style: none;
+        margin-right: 5px;
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+    
+    .toolbar_content ul {
+        padding: 0px;
+        margin: 0px;
+    }
+    
+    .toolbar_content a {
+        text-decoration: none;
+    }
+    
+    .toolbar_content a img {
+        border: 0;
+        vertical-align: middle;
+    }
+    
+    .toolbar_content a:visited {
+        color: Black;
+    }
+    
+    .toolbar_content a:link {
+        color: Black;
+    }
+    
+    .btnList ul {
+        float: right;
+    }
+    
+    .btnList li {
+        display: inline;
+        float: right;
+        margin-right: 1px;
+        cursor: pointer;
+    }
+    
+    .btnList .li_Btn_Left a {
+        background: url("li_btn_left.gif") no-repeat left top;
+        background-position: 0% -33px;
+        margin: 0;
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        width: 9%;
+        height: 33px;
+        cursor: pointer;
+    }
+    
+    .btnList .li_Btn_Right a {
+        background: url("li_btn_right.gif") no-repeat right top;
+        background-position: 100% -33px;
+        margin: 0;
+        text-decoration: none;
+        text-align: center;
+        width: 8%;
+        display: block;
+        height: 33px;
+        cursor: pointer;
+    }
+    /*2017-04-20 new*/
+    
+    .btnList .li_Btn_Left-new,
+    .btnList .li_Btn_Right-new {
+        display: inline;
+        width: auto;
+    }
+    
+    .btnList .li_Btn_Left-new a,
+    .btnList .li_Btn_Right-new a {
+        display: inline-block;
+        margin: 2px;
+        padding: 0 10px;
+        width: inherit;
+        height: 29px;
+        line-height: 29px;
+        text-decoration: none;
+        text-align: center;
+        background-color: #0081c6;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+    
+    .btnList .li_Btn_Left-new a:hover,
+    .btnList .li_Btn_Right-new a:hover {
+        background-color: #49a6cc;
+    }
+    
+    .btnList .li_Btn_Left-new a span,
+    .btnList .li_Btn_Right-new a span {
+        display: inline-block;
+        padding: 0;
+        width: auto;
+    }
+    
+    .btnList a:hover {
+        background-position-y: 0px;
+    }
+    
+    .btnList li a span {
+        padding: 8px 8px 0px 8px;
+        display: block;
+        color: White;
+        font-family: Arial;
+        font-size: 10pt;
+        font-weight: bolder;
+        width: 100%;
+    }
+    
+    .gvwHeader {
+        background-image: url(column_repeat.gif);
+        background-repeat: repeat-x;
+        font-style: normal;
+        height: 20px;
+        font-weight: inherit;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding: 0px 4px;
+    }
+    
+    .gvwFooter {
+        cursor: default;
+    }
+    
+    .gvw {
+        border-left: 1px solid #CCC;
+        border-right: 1px solid #CCC;
+    }
+    
+    .gvw td {
+        padding: 2px 4px;
+        /*  cursor: hand; */
+        border-right: 1px solid #CCC;
+        border-bottom: 1px solid #CCC;
+    }
+    
+    .gvw th {
+        padding: 0px 5px;
+    }
+    
+    .input {
+        border: 1px solid black;
+        height: 18px;
+    }
+    </style>
+    <style type="text/css" id="parrottalks-notetaker-style">
+    html > body.evernote_clearly__before_visible #parrottalks-notetaker > iframe,
+    html > body.clearlyBeforeVisible #parrottalks-notetaker > iframe:not(#evernoteGlobalTools):not(#evernoteOptionsPage):not(#evernoteClearlyArticle) {
+        visibility: visible !important;
+    }
+    
+    .evernote_clearly__before_visible #evernote_clearly__reformat,
+    .clearlyBeforeVisible #evernoteClearlyArticle {
+        z-index: 2147483646 !important;
+    }
+    </style>
+</head>
+
+<body style="font-size:12px; margin:0px 2px;">
+測試
+    <form id="form1" runat="server">
+        
+
+
+        <table style="width: 100%; margin: 0 auot;" border="0" cellpadding="0" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td class="toolbar_left" style="height: 33px">
+                    </td>
+                    <td class="toolbar_content" style="padding: 0px; height: 33px;" align="right" valign="middle">
+                        <ul class="btnList">
+                            <li class="li_Btn_Right-new"><a href="javascript:ReturnMain(false);" id="a_close"><span>
+                            Cancel</span> </a></li>
+                            <li class="li_Btn_Left-new"><a id="lnkSave" href="javascript:ReturnMain(true);"><span>
+                            OK</span> </a></li>
+                        </ul>
+                    </td>
+                    <td class="toolbar_right" style="height: 33px">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+
+    </form>
+</body>
+
+</html>
